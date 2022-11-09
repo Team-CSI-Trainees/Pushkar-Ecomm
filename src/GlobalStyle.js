@@ -21,7 +21,6 @@ body {
   overflow-x: hidden;
    scrollbar-color: rgb(98 84 243);
     scrollbar-width: thin;
-    ${'' /* background: red;  */}
 }
 
 body::-webkit-scrollbar {
@@ -97,7 +96,6 @@ ${"" /* resuable code section  */}
 
 .grid-two-column {
   grid-template-columns: repeat(2, 1fr);
-
 }
 
 .grid-three-column {
@@ -158,30 +156,22 @@ input, textarea{
     cursor: pointer;
     }
 
-
-
-
-
-
- @media (max-width: ${({ theme }) => theme.media.tab}) {
+@media (max-width: ${({ theme }) => theme.media.tab}) {
     .container {
     max-width: 130rem;
     padding: 0 3.2rem;
   }
   }
 
-   @media (max-width: ${({ theme }) => theme.media.mobile}) {
-       html {
+@media (max-width: ${({ theme }) => theme.media.mobile}) {
+    html {
       font-size: 50%;
-    } 
-}
-
-.grid{
-  gap: 3.2rem;
-}
-      .grid-two-column , .grid-three-column, .grid-four-column{
-          grid-template-columns: 1fr;
-        }
     }
-
+    .grid{
+      gap: 3.2rem;
+    }
+    .grid-two-column , .grid-three-column, .grid-four-column{
+        grid-template-columns: 1fr;
+    }
+    }
 `;
